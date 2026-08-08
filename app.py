@@ -1,19 +1,22 @@
-from agents.oracle_agent import OracleAgent
+import streamlit as st
 
-agent = OracleAgent()
+st.set_page_config(
+    page_title="Oracle AI Engineer",
+    page_icon="🤖",
+    layout="wide"
+)
 
-print("=" * 60)
-print("🤖 Oracle AI Engineer")
-print("=" * 60)
+st.title("🤖 Oracle AI Engineer")
 
-while True:
+st.write("Welcome to your Oracle AI Engineer!")
 
-    question = input("\nYou: ")
+st.markdown("""
+### Choose what you want to do:
 
-    if question.lower() == "exit":
-        break
-
-    answer = agent.ask(question)
-
-    print("\nOracle AI:\n")
-    print(answer)
+- 💬 Chat with Oracle AI
+- 📝 Generate Oracle SQL
+- ⚡ Optimize SQL
+- 🛠 Oracle APEX Assistant
+- 🚨 Explain Oracle Errors
+- 🗄 Connect to Oracle Database
+""")

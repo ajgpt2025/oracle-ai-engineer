@@ -1,35 +1,19 @@
-import oracledb
+class OracleTools:
 
+    @staticmethod
+    def generate_sql(request):
 
-class OracleDB:
+        prompt = f"""
+Generate ONLY Oracle SQL.
 
-    def __init__(self):
+User Request:
+{request}
 
-        self.connection = None
+Rules:
+- Return only Oracle SQL.
+- Use Oracle SQL syntax.
+- No explanation.
+- No markdown.
+"""
 
-    def connect(
-        self,
-        user,
-        password,
-        host,
-        port,
-        service
-    ):
-
-        self.connection = oracledb.connect(
-            user=user,
-            password=password,
-            host=host,
-            port=port,
-            service_name=service
-        )
-
-        return self.connection
-
-    def execute(self, sql):
-
-        cursor = self.connection.cursor()
-
-        cursor.execute(sql)
-
-        return cursor.fetchall()
+        return prompt
