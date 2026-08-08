@@ -64,20 +64,6 @@ python app.py
 
 ---
 
-## 📌 Roadmap
-
-- [x] Local AI Chat
-- [x] Project Structure
-- [x] GitHub Repository
-- [ ] Streamlit Web UI
-- [ ] Oracle SQL Generator
-- [ ] SQL Optimizer
-- [ ] Oracle Database Connection
-- [ ] Oracle APEX Assistant
-- [ ] PDF RAG
-- [ ] Multi-Agent Architecture
-
----
 
 ## 👨‍💻 Author
 
